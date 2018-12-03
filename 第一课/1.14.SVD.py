@@ -42,9 +42,9 @@ def restore2(sigma, u, v, K):  # 奇异值、左特征向量、右特征向量
 
 
 if __name__ == "__main__":
-    A = Image.open(".\\son.png", 'r')
+    A = Image.open("son.png", 'r')
     print(A)
-    output_path = r'.\SVD_Output'
+    output_path = r'SVD_Output'
     if not os.path.exists(output_path):
         os.mkdir(output_path)
     a = np.array(A)
@@ -63,7 +63,7 @@ if __name__ == "__main__":
         G = restore1(sigma_g, u_g, v_g, k)
         B = restore1(sigma_b, u_b, v_b, k)
         I = np.stack((R, G, B), axis=2)
-        Image.fromarray(I).save('%s\\svd_%d.png' % (output_path, k))
+        Image.fromarray(I).save('{}/svd_{}.png'.format(output_path, k))
         if k <= 12:
             plt.subplot(3, 4, k)
             plt.imshow(I)
