@@ -35,7 +35,7 @@ def restore2(sigma, u, v, K):  # 奇异值、左特征向量、右特征向量
 
 
 # import cv2
-# x = cv2.imread('./son.png')
+# x = cv2.imread('son.png')
 # print(type(x))
 # print(x.shape)
 # print(x)
