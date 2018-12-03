@@ -1,2 +1,2 @@
-# lujiazui_class
+# 陆家嘴学堂
 Python机器学习与深度学习16天高级训练营
